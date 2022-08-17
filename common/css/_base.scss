@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+//フォントの読み込み
+@font-face {
+    font-family: 'Hui';
+    src: url('../font/HuiFont29.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//px→vw単位への変換
+
+@function vw($fs:24,$kv:750) {
+    $vw: 100/$kv * $fs;
+    @return $vw#{"vw"};
+}
+
+//文字のレスポンシブ 対応
+@function fc($max:24,$mw:750,$min:12) {
+    $vw: 100/$mw * $max;
+
+    @return clamp(#{$min#{"px"}},#{$vw#{"vw"}},#{$max#{"px"}}) ;
+}
+
+//メディアクエリ用のミックスいん
+$layout-width-inner: 1171px;
+
+$breakpoints: (
+    'sp': '(max-width: 750px)',
+    'tab': '(min-width: 751px) and (max-width: #{$layout-width-inner - 1px})',
+    'pc': '(min-width: #{$layout-width-inner})',
+    'ly': '(max-width: 960px)',
+) !default;
+
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+    }
+}
+
+//疑似クラス画像対応用のミックスいん
+@mixin before-img {
+    position: absolute;
+    display: block;
+    content: "";
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+//疑似クラス共通設定
+@mixin  before {
+    position: absolute;
+    display: block;
+    content: "";
+}
+
+//ｂｇの共通設定
+@mixin  bg($sw:true) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    @if $sw {
+        background-position: center;
+    }
+}
+@mixin  flex($jc:true,$wrap:false) {
+    display: flex;
+    @if $jc {
+        justify-content: space-between;
+    }
+    @if $wrap {
+        flex-wrap: wrap;
+    }
+}
+
+//幅関係
+$w_base:1080px;     //メインの幅
+$sp:750;
+$tab:1170;
+$pc:2000;
+//フォント関係
+$f_ttl:'Hui';  //後でフォントを複数追加
+$f_noto:'Noto Sans JP';
+//カラー関係
+$c: #333;
+$w: #fff
+

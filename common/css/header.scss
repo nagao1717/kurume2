@@ -1,0 +1,69 @@
+@import '_base';
+
+img {
+    width: 100%;
+    
+}
+.header {
+    &-logo {
+        width: vw(400,$pc);
+        position: absolute;
+        top: vw(30,$pc);
+        left: vw(50,$pc);
+        height: vw(50,$pc);
+        z-index: 100;
+        @include mq(){
+            width: vw(300,$sp);
+            top: vw(20,$sp);
+            left: vw(20,$sp)
+        }
+    }
+    &--pc-menu {
+        position: absolute;
+        z-index: 100;
+        top:vw(50,$pc);
+        right:vw(50,$pc);
+        padding: vw(30,$pc) vw(50,$pc) vw(30,$pc) vw(100,$pc);
+        background: rgba(102,163,91,0.8);
+        border-radius: vw(40);
+        @include flex($jc:false);
+
+        @include mq(){
+            display: none;
+        }
+
+        a {
+            display: block;
+            white-space: nowrap;
+            color: $w;
+            font-size: fc(24,$pc);
+            text-shadow: 3px 3px 10px #16450e;
+            position: relative;
+            &::before {
+                @include before-img();
+                left: vw(-60,$pc);
+                top: 50%;
+                transform: translateY(-50%);
+                width: vw(40,$pc);
+                height: vw(40,$pc);
+            }
+            
+        }
+        li {
+            &:nth-of-type(n+2) {
+                margin-left: vw(100,$pc);
+            }
+            @for $i from 1 through 4 {
+                &:nth-of-type(#{$i}) {
+                    a::before {
+                        background-image: url(../images/header-icon#{$i}.png);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-----------------------------------------------------------------*/
+/* main -----------------------------------------------------------*/
+/*----------------------------------------------------------------*/

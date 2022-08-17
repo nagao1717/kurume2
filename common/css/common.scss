@@ -1,0 +1,355 @@
+@import '_base';
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: $f_ttl;
+}
+
+.text {
+    font-family: $f_noto;
+    font-size: fc(16,$sp,14);
+    line-height: 1.5;
+}
+
+.pc {
+    display: block;
+    @include mq(){
+        display: none;
+    }
+}
+.sp {
+    display: none;
+    @include mq() {
+        display: block;
+    }
+}
+
+.ly-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    @include mq(ly){
+        padding: 0 vw(20,960);
+    }
+    @include mq() {
+        padding: 0 vw(20);
+        max-width: 500px;
+    }
+}
+.ly2-container {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    @include mq() {
+        padding: 0 vw(20);
+    }
+}
+.ttl {
+    position: relative;
+    padding: 0 vw(160,$pc);
+    max-width: 960px;
+    margin: 0 auto;
+    // height: vw(100,$pc);
+    height: 100px;
+    background-image: linear-gradient(to right, #093c00 50%, #5a7c54);
+    text-shadow: 3px 3px 10px #16450e;
+    font-family: 'Hui';
+    // font-size: fc(55,$pc);
+    font-size: 55px;
+    // line-height: vw(100,$pc);
+    line-height: 100px;
+    text-align: center;
+    color: #fff;
+    &::before {
+        @include before-img();
+        background-image: url(../images/ttl-bg.png);
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        // width: vw(116,$pc);
+        // height: vw(100,$pc);
+        width: 116px;
+        height: 100px;
+    }
+    @include mq(){
+        font-size: fc(33,500,28);
+        height: vw(84);
+        line-height: vw(84);
+        &::before {
+            display: none;
+            width: vw(116,500);
+            height: vw(100,500);
+        }
+    }
+    
+}
+
+//スライド各種テキストタイトルボタンのCSS
+.slide {
+    &-item {
+        width: 100vw;
+        height: 100vh;
+        @include bg();
+        background-image: url(../images/mv1.jpg);
+        background-attachment: fixed;
+        &:nth-of-type(2) {
+            background-image: url(../images/mv2.jpg);
+        }
+        &:nth-of-type(3) {
+            background-image: url(../images/mv3.jpg);
+        }
+        position: relative;
+    }
+    &-text-box {
+        position: absolute;
+        left: vw(50,$pc);
+        bottom: 50px;
+        width: 100%;
+        @include mq(tab) {
+            left: 50%;
+            transform: translate(-50%,-50%);
+            bottom: 0;
+        }
+        @include mq() {
+            left: 50%;
+            transform: translate(-50%,-50%);
+            bottom: 30px;
+        }
+    }
+    &-ttl {
+        font-size: fc(100,$pc);
+        font-weight: normal;
+        color: $w;
+        text-shadow: 3px 3px 20px #114408;
+
+        @include mq(tab) {
+            text-align: center;
+            font-size: fc(110,$tab);
+        }
+
+        @include mq(){
+            font-size: fc(80);
+            text-align: center;
+        }
+    }
+    &-text {
+        font-size: fc(30,$pc);
+        font-weight: normal;
+        width: vw(800,$pc);
+        color: $w;
+        margin-top: vw(50,$pc);
+        @include mq(tab) {
+            margin: vw(50,$tab) auto 0;
+            font-size: fc(30,$tab);
+            width: vw(800,$tab);
+        }
+        @include mq(){
+            // display: none;
+            margin: vw(50,$sp) auto 0;
+            font-size: fc(30,$sp);
+            width: vw(710,$sp);
+        }
+    }
+    &-btn {
+        display: block;
+        width: vw(300,$pc);
+        height: vw(60,$pc);
+        font-size: fc(30,$pc);
+        color: $w;
+        text-align: center;
+        line-height: vw(60,$pc);
+        box-shadow: 2px 2px 5px 0 #16450e;
+        border: solid 2px #fff;
+        margin-top: vw(50,$pc);
+        @include mq(tab) {
+            margin: vw(50,$tab) auto 0;
+            font-size: fc(30,$tab);
+            width: vw(300,$tab);
+            height: vw(60,$tab);
+            line-height: vw(60,$tab);
+        }
+        @include mq(sp) {
+            margin: vw(50,$sp) auto 0;
+            font-size: fc(30,$sp);
+            width: vw(280,$sp);
+            height: vw(60,$sp);
+            line-height: vw(60,$sp);
+        }
+    }
+}
+.media {
+    @include flex();
+    width: 100%;
+    margin-top: 200px;
+    @include mq(){
+        display: block;
+    }
+    &-re {
+        flex-direction: row-reverse;
+    }
+    &-item {
+        width: vw(400);
+        max-width: 400px;
+        @include mq(){
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    &-ttl {
+        font-size: 42px;
+        padding-top: 20px;
+        color: #bab601;
+        @include mq(){
+            font-size: fc(42,$sp,25);
+        }
+    }
+    &-text {
+        margin-top: vw(40,$pc);
+    }
+    &-img {
+        width: vw(480,960);
+        max-width: 500px;
+        overflow: hidden;
+        box-shadow:  3px 3px 20px #E6EFE5;
+        @include mq(){
+            width: 100%;
+            max-width: 100%;
+
+        }
+    }
+    &-btn {
+        display: block;
+        width: 300px;
+        height: 60px;
+        margin-top: 50px;
+        border-radius: 30px;
+        border: solid 2px #bab601;
+        font-size: 24px;
+        text-align: center;
+        line-height: 60px;
+        color: #bab601;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+//アニメーション関係
+//スライドアニメーション関係のCSS
+// .slide {
+//     &-wrap {
+//         // overflow: hidden;
+//         overflow-x:scroll ;
+//         height: 100vh;
+//     }
+//     &-container {
+//         // display: flex;
+//         position: relative;
+//     }
+//     &-item {
+//         position: absolute;
+//         z-index: 80;
+//         left: 0;
+//         top: 0;
+//         @for $i from 1 through 3 {
+//             &:nth-of-type(#{$i}) {
+//                 left: #{($i * 100)-100}vw;
+//             }
+//         }
+//     }
+// }
+
+/*========= 流体シェイプを動かす ===============*/
+.fluid {
+    &-wrap {
+        width: 100%;
+        overflow: hidden;
+    }
+    position: relative;
+    &::before {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        display: block;
+        width:vw(300,960);/*横幅*/
+        height: vw(300,960);/*縦幅*/
+        // @include bg();
+        // background-image: url(../images/bg.png);
+        background: #bab601;
+        animation: fluidrotate 10s ease  infinite;/*アニメーションの設定*/
+        // left: 0;
+        right: -50px;
+        top: -200px;
+    }
+  }
+  .fluid2 {
+    display: block;
+    animation: fluidrotate2 20s ease infinite;/*アニメーションの設定*/
+    // left: 0;
+    right: -50px;
+    top: 100px;
+    
+  }
+  
+@keyframes fluidrotate {  
+      
+  0%, 100% {
+      border-radius: 50% 50% 52% 48% / 34% 60% 40% 66% ;
+  }
+  25% {
+      border-radius: 50% 50% 73% 27% / 11% 44% 56% 89% ;
+  }
+  50% {
+      border-radius: 47% 53% 47% 53% / 49% 44% 56% 51% ;
+  }
+  75% {
+    border-radius: 25% 75% 78% 22% / 49% 44% 56% 51%  ;
+  }
+
+}
+@keyframes fluidrotate2 {  
+      
+    0%, 100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    }
+    25% {
+        border-radius: 91% 9% 70% 30% / 30% 84% 16% 70%;
+    }
+    50% {
+        border-radius: 91% 9% 50% 50% / 52% 84% 16% 48% ;
+    }
+    75% {
+      border-radius: 11% 89% 8% 92% / 87% 16% 84% 13% ;
+    }
+  
+  }
+
+//スクロールアニメーション
+.anm-slide_left {
+    position: relative;
+    transition: all 2s ease;
+    opacity: 0;
+    transform: translateX(-100px);
+    &.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.anm-slide_top {
+    transition: all 3s ease;
+    opacity: 0;
+    transform: translate(40px,40px);
+    &.active {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
