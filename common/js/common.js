@@ -15,13 +15,11 @@
             pauseOnHover: false,//マウスホバーで一時停止を無効
             pauseOnDotsHover: false,//ドットナビゲーションをマウスホバーで一時停止を無効
     });
-    
-
 function scrollWatch(el,func) {
     $(window).scroll(function(){
         let offset = 0;  //各種要素の位置を取得
         let scroll = $(window).scrollTop();
-        let w_height = $(window).height() /2 ;
+        let w_height = $(window).height() /1.5 ;
         // console.log(scroll);
         for(let i = 0,len = el.length;i < len; i++){
             // offset = el.item(i).offsetTop - w_height;

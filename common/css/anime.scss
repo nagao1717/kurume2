@@ -20,6 +20,12 @@
         // left: 0;
         right: -50px;
         top: -200px;
+        @include mq(){
+            width: vw(600);
+            height: vw(500);
+            top: inherit;
+            bottom: -50px;
+        }
     }
   }
   .fluid2 {
@@ -69,7 +75,17 @@
     position: relative;
     transition: all 1s  ease-out;
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-40px);
+    &.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.anm-slide_right {
+    position: relative;
+    transition: all 1s  ease-out;
+    opacity: 0;
+    transform: translateX(40px);
     &.active {
         opacity: 1;
         transform: translateX(0);
@@ -129,11 +145,48 @@
         transform: translate(0,0);
     }
 }
-@for $i from 1 through 10 {
+// @charset "utf-8";
+
+/*========= レイアウトのためのCSS ===============*/
+p{
+  text-align: center;
+  margin: 20px 0;
+  font-size:1.5rem;
+}
+
+.anm_blur{
+    transition: all 1s ease;
+    filter: blur(15px);
+    // transform: scale(1.02);
+  opacity: 0;
+  &.active {
+    filter: blur(0);
+    // transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes blurAnime{
+  from {
+  filter: blur(190px);
+  transform: scale(1.02);
+  opacity: 0;
+  }
+
+  to {
+  filter: blur(0);
+  transform: scale(1);
+  opacity: 1;
+  }
+}
+@for $i from 1 through 5 {
     .anm_time#{$i} {
-        transition: all #{$i}s ease;
+        transition: all #{$i*0.5}s ease;
     }
     .anm_l#{$i} {
-        transition:  all 2s #{$i*0.5}s ease;
+        transition:  all 1.5s #{$i*0.5}s ease;
+    }
+    .anm_ls#{$i} {
+        transition:  all 1.5s #{$i*0.2}s ease;
     }
   }

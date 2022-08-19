@@ -170,6 +170,7 @@
   font-weight: normal;
   color: #fff;
   text-shadow: 3px 3px 20px #114408;
+  display: inline-block;
 }
 
 @media (min-width: 751px) and (max-width: 1170px) {
@@ -258,6 +259,7 @@
 @media (max-width: 750px) {
   .media {
     display: block;
+    margin-top: 13.33333vw;
   }
 }
 
@@ -294,6 +296,7 @@
 
 .media-text {
   margin-top: 2vw;
+  text-align: left;
 }
 
 .media-img {
@@ -322,5 +325,60 @@
   text-align: center;
   line-height: 60px;
   color: #bab601;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 70px 0 0 0;
+}
+
+.card-item {
+  width: 30%;
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(1, 90, 52, 0.16);
+          box-shadow: 0 3px 6px 0 rgba(1, 90, 52, 0.16);
+}
+
+.card-item img {
+  width: 100%;
+  height: 70%;
+  height: 180px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-ttl {
+  width: 100%;
+  font-size: 30px;
+  top: 180px;
+  left: -20px;
+}
+
+.card-text {
+  margin-top: 10px;
+}
+
+.card-text_box {
+  padding: 10px 10px;
+}
+
+.card-btn {
+  display: block;
+  width: 80%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background: #bab601;
+  color: #fff;
+  border-radius: 30px;
+  margin: 10px auto 0;
 }
 /*# sourceMappingURL=common.css.map */

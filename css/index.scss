@@ -6,6 +6,7 @@
         padding: 100px 0 100px 0;
         @include bg();
         background-image: url(../common/images/info-bg.jpg);
+        background-attachment: fixed;
     }
     &-text_box {
         width: 100%;
@@ -20,7 +21,7 @@
 
 .about {
     &-container {
-        padding: 100px 0 0 0;
+        padding: 100px 0 100px 0;
         // height: 700px;
     }
     &-item2 {
@@ -66,5 +67,16 @@
             color: #093c00;
             
         }
+    }
+}
+
+.blog {
+    &-container {
+        padding: 100px 0 0 0;
+        // height: 700px;
+        @include bg();
+        background-image: url(../common/images/blog-bg.jpg);
+        background-attachment: fixed;
+        height: 747px;
     }
 }
