@@ -5,6 +5,8 @@ img {
     
 }
 .header {
+    position: absolute;
+    width: 100vw;
     &-logo {
         width: vw(400,$pc);
         position: absolute;
