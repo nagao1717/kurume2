@@ -78,4 +78,14 @@
   background-attachment: fixed;
   height: 747px;
 }
+
+.access-container {
+  padding: 100px 0 100px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../common/images/access-bg.jpg);
+  background-attachment: fixed;
+  height: 1212px;
+}
 /*# sourceMappingURL=index.css.map */

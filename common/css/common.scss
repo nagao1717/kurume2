@@ -94,13 +94,13 @@
         width: 100vw;
         height: 100vh;
         @include bg();
-        background-image: url(../images/mv1.jpg);
+        background-image: url(../images/mv2.jpg);
         background-attachment: fixed;
         &:nth-of-type(2) {
             background-image: url(../images/mv2.jpg);
         }
         &:nth-of-type(3) {
-            background-image: url(../images/mv3.jpg);
+            background-image: url(../images/mv2.jpg);
         }
         position: relative;
     }
@@ -313,3 +313,13 @@
 //         }
 //     }
 // }
+
+.google-map {
+    margin: 30px auto 0;
+    text-align: center;
+    iframe {
+        width: 100%;
+        height: vw(400,960);
+        max-height: 400px;
+    }
+}

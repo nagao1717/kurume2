@@ -80,3 +80,13 @@
         height: 747px;
     }
 }
+
+.access {
+    &-container {
+        padding: 100px 0 100px 0;
+        @include bg();
+        background-image: url(../common/images/access-bg.jpg);
+        background-attachment: fixed;
+        height: 1212px;
+    }
+}
