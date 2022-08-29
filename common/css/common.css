@@ -173,16 +173,16 @@ a:hover {
   border-radius: 30px;
   background: #bab601;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 0;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   z-index: -1;
 }
 
 .btn:hover {
-  border: none;
+  opacity: 1;
 }
 
 .btn:hover span {
@@ -223,7 +223,7 @@ a:hover {
   width: 100%;
 }
 
-@media (min-width: 751px) and (max-width: 1170px) {
+@media (min-width: 751px) and (max-width: 959px) {
   .slide-text-box {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -249,7 +249,7 @@ a:hover {
   display: inline-block;
 }
 
-@media (min-width: 751px) and (max-width: 1170px) {
+@media (min-width: 751px) and (max-width: 959px) {
   .slide-ttl {
     text-align: center;
     font-size: clamp(12px, 9.40171vw, 110px);
@@ -271,7 +271,7 @@ a:hover {
   margin-top: 2.5vw;
 }
 
-@media (min-width: 751px) and (max-width: 1170px) {
+@media (min-width: 751px) and (max-width: 959px) {
   .slide-text {
     margin: 4.2735vw auto 0;
     font-size: clamp(12px, 2.5641vw, 30px);
@@ -301,7 +301,7 @@ a:hover {
   margin-top: 2.5vw;
 }
 
-@media (min-width: 751px) and (max-width: 1170px) {
+@media (min-width: 751px) and (max-width: 959px) {
   .slide-btn {
     margin: 4.2735vw auto 0;
     font-size: clamp(12px, 2.5641vw, 30px);

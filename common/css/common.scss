@@ -127,14 +127,15 @@ a {
             border-radius: 30px;
             background: #bab601;
             top: 50%;
-            transform: translateY(-50%);
-            left: 0;
-            transition: all 0.3s ease-out;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            transition: all 0.2s ease-out;
             z-index: -1;
         }
     }
     &:hover {
-        border: none;
+        // border: none;
+        opacity: 1;
         span {
             color: #fff;
         }

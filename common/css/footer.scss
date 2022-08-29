@@ -1,0 +1,123 @@
+@import '_base';
+.footer {
+    position: relative;
+    padding: 80px 0;
+    background-size: cover;
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-image: url(../images/bg-footer2.jpg);
+    &-item {
+        width: 45%;
+    }
+    &-list {
+        text-align: center;
+        
+        margin-top: 30px;
+        li {
+            margin-bottom: 20px;
+        }
+        a {
+            display: block;
+            color: #14450b;
+            width: 200px;
+            padding: 12px 10px;
+            font-size: 20px;
+            text-align: center;
+            background: #fff;
+            border-radius: 20px;
+        }
+    }
+    
+    &-logo {
+        display: block;
+        width: 300px;
+    }
+    &-ttl {
+        margin-top: 50px;
+        color: #fff;
+        font-size: 30px;
+        text-shadow: 3px 3px 20px #114408;
+    }
+    &-item02 {
+        .footer {
+            &-inner {
+                background: rgba(255,255,255,0.8);
+                border-radius: 20px;
+                padding: 10px 0px 20px 20px;
+            }
+            &-ttl {
+                margin-top: 0;
+                color: #14450b;
+                text-shadow: none;
+            }
+            &-list {
+                // background: #fff;
+                // display: inline-block;
+                // border-radius: 20px;
+                // padding: 40px 0px 20px 20px;
+                li {
+                    margin-bottom: 10px;
+                }
+                a {
+                    padding:5px 10px;
+                    border-radius: 0;
+                    text-align: left;
+                    background: inherit;
+                }
+            }
+        }
+    }
+}
+
+.tel-btn {
+    display: block;
+    position: relative;
+    font-size: 50px;
+    color: #fff;
+    padding-left: 50px;
+    margin-bottom: 40px;
+    &::before {
+        @include before-img();
+        background-image: url(../images/tel.png);
+        width: 50px;
+        height: 50px;
+        top: 55%;
+        transform: translateY(-50%);
+        left: 0;
+    }
+}
+.contact-btn {
+    position: relative;
+    display: block;
+    text-shadow: 3px 3px 10px #16450e;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    width: 300px;
+    height: 60px;
+    background: linear-gradient(#b9b500 0%, #d8d413 100%);
+    margin-bottom: 60px;
+    &::before {
+        @include before-img();
+        background-image: url(../images/mail.png);
+        width: 34.5px;
+        height: 27px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+    }
+}
+
+.copy-right {
+    display: block;
+    width: 100vw;
+    padding: 15px 0;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    background: #093c01;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
