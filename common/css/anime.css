@@ -226,12 +226,6 @@
 }
 
 /*========= レイアウトのためのCSS ===============*/
-p {
-  text-align: center;
-  margin: 20px 0;
-  font-size: 1.5rem;
-}
-
 .anm_blur {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;

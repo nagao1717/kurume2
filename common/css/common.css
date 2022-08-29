@@ -45,6 +45,17 @@ img {
   }
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .ly-container {
   width: 100%;
   max-width: 960px;
@@ -130,7 +141,7 @@ img {
   border: solid 2px #bab601;
   font-size: 24px;
   text-align: center;
-  line-height: 60px;
+  line-height: 56px;
   color: #bab601;
 }
 
@@ -446,5 +457,95 @@ img {
   width: 100%;
   height: 41.66667vw;
   max-height: 400px;
+}
+
+.link-item {
+  width: 47%;
+}
+
+.link-item a {
+  display: block;
+  width: 100%;
+  height: 181px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 15px 10px 15px 15px;
+  border-radius: 20px;
+}
+
+.link-item img {
+  width: 45%;
+  height: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+
+.link-item span {
+  display: block;
+  color: #fff;
+}
+
+.link-item:nth-of-type(1) a, .link-item:nth-of-type(5) a {
+  background: #bab605;
+}
+
+.link-item:nth-of-type(2) a, .link-item:nth-of-type(6) a {
+  background: #626006;
+}
+
+.link-item:nth-of-type(3) a, .link-item:nth-of-type(7) a {
+  background: #647311;
+}
+
+.link-item:nth-of-type(4) a, .link-item:nth-of-type(8) a {
+  background: #093c01;
+}
+
+.link-text-box {
+  padding-left: 15px;
+}
+
+.link-ttl {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.link-btn {
+  font-size: 20px;
+  position: absolute;
+  bottom: 15px;
+  right: 40px;
+}
+
+.link-btn::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  background: #fff;
+  top: 45%;
+  -webkit-transform: translateY(-50%) rotate(30deg);
+          transform: translateY(-50%) rotate(30deg);
+  right: -20px;
+}
+
+.link-btn::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  top: 57%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -20px;
 }
 /*# sourceMappingURL=common.css.map */

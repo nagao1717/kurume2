@@ -160,16 +160,22 @@
         }
         .text {
             color: #fff;
-            line-height: 1.25;
+            line-height: 1.5;
             text-align: left;
-            width: 40%;
+            margin: 30px 0;
         }
         .btn {
             color: #fff;
             border: 2px solid #fff;
+            margin-top: 0;
             span::before {
                 background: #fff;
-            } 
+            }
+            &:hover {
+                span {
+                    color: #647311;
+                }
+            }
         }
     }
     &-text_box {
@@ -179,13 +185,30 @@
         padding: 40px 18px 40px 40px;
         border-radius: 15px;
         border: solid 5px #707070;
-        background-color: #fff;;
+        background-color: #fff;
+    }
+    &-text-area {
+        width: 45%;
     }
     &-item {
         height: 422px;
         background: #bab601;
         position: relative;
         overflow: hidden;
+        &:nth-of-type(2) {
+            background: #626006;
+        }
+        &:nth-of-type(3) {
+            background: #647311;
+        }
+        &:nth-of-type(4) {
+            background: #093c00;
+        }
+        .ly-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
         &::before {
             @include before();
             top: 0;
@@ -201,14 +224,12 @@
         }
         //アニメーションの設定
         transition: all 0.4s ease;
-        width: 0;
+        left: -100%;
         &.active {
-            // opacity: 1;
-            width: 100%;
+            left: 0;
             &::before {
                 transition: all 0.4s 0.7s ease;
                 left: 100%;
-                
             }
         }
     }
@@ -220,5 +241,109 @@
         height: 422px;
         border-radius: 100px 0 0 300px;
         z-index: 10;
+        object-fit: cover;
+        // object-position: center;
+    }
+    &-item_re {
+        .job-img {
+            right: inherit;
+            left: 0;
+            border-radius: 0 300px 100px 0;
+        }
+        .ly-container {
+            
+            justify-content: end;
+        }
+        left: 100%;
+        &.active {
+            &::before {
+                left: -100%;
+            }
+        }
+    }
+}
+
+.link {
+    &-container {
+        padding: 100px 0 100px 0;
+    }
+    &-list {
+        margin-top: 50px;
+    }
+    &-item {
+        width: 47%;
+        margin-bottom: 40px;
+        a {
+            display: block;
+            width: 100%;
+            height: 181px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 15px 10px 15px 15px;
+            border-radius: 20px;
+        }
+        img {
+            width: 45%;
+            height: 80%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        span {
+            display: block;
+            color: #fff;
+        }
+        &:nth-of-type(1) , &:nth-of-type(5) {
+            a {
+                background: #bab605;
+            }
+        }
+        &:nth-of-type(2) , &:nth-of-type(6) {
+            a {
+                background: #626006;
+            }
+        }
+        &:nth-of-type(3) , &:nth-of-type(7) {
+            a {
+                background: #647311;
+            }
+        }
+        &:nth-of-type(4) , &:nth-of-type(8) {
+            a {
+                background: #093c01;
+            }
+        }
+    }
+    &-text-box {
+        padding-left: 15px;
+    }
+    &-ttl {
+        font-size: 25px;
+        // font-weight: 300;
+        margin-bottom: 10px;
+    }
+    &-btn {
+        font-size: 20px;
+        position: absolute;
+        bottom: 15px;
+        right: 40px;
+        &::before {
+            @include before();
+            width: 12px;
+            height: 2px;
+            background: #fff;
+            top: 45%;
+            transform: translateY(-50%) rotate(30deg);
+            right: -20px;
+        }
+        &::after {
+            @include before();
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            top: 57%;
+            transform: translateY(-50%);
+            right: -20px
+        }
     }
 }
