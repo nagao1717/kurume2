@@ -150,7 +150,7 @@
     &-container {
         // height: vw(687,2000);
         // height: 687px;
-        padding: 100px 0 100px 0;
+        padding: 100px 0 0 0;
         @include bg();
         background-image: url(../common/images/info-bg.jpg);
         background-attachment: fixed;
@@ -265,10 +265,17 @@
 
 .link {
     &-container {
-        padding: 100px 0 100px 0;
+        padding: 160px 0 100px 0;
+        @include bg();
+        background-image: url(../common/images/bg.png);
+        background-attachment: fixed;
+        p.text {
+            color:#0f4106;
+            margin-top: 50px;
+        }
     }
     &-list {
-        margin-top: 50px;
+        margin-top: 40px;
     }
     &-item {
         width: 47%;

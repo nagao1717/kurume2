@@ -159,7 +159,7 @@
 }
 
 .job-container {
-  padding: 100px 0 100px 0;
+  padding: 100px 0 0 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -294,11 +294,21 @@
 }
 
 .link-container {
-  padding: 100px 0 100px 0;
+  padding: 160px 0 100px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../common/images/bg.png);
+  background-attachment: fixed;
+}
+
+.link-container p.text {
+  color: #0f4106;
+  margin-top: 50px;
 }
 
 .link-list {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .link-item {

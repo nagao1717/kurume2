@@ -10,6 +10,13 @@
 img {
     vertical-align: bottom;
 }
+a {
+    transition: all 0.3s ease;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+    }
+}
 .text {
     font-family: $f_noto;
     font-size: fc(16,$sp,14);
