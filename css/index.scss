@@ -87,6 +87,138 @@
         @include bg();
         background-image: url(../common/images/access-bg.jpg);
         background-attachment: fixed;
-        height: 1212px;
+    }
+    &-list {
+        background: #fff;
+        display: inline-block;
+        padding: fc(20,960) fc(100,960) fc(50,960) fc(200,960);
+        max-width: 590px;
+        max-height: 435px;
+        text-align: left;
+        dt {
+            font-size: fc(30,960,20);
+            color: #647311;
+            margin-top: 30px;
+            &:nth-of-type(2) {
+                color: #647311;
+            }
+            &:nth-of-type(3) {
+                color: #bab605;
+            }
+        }
+        dd {
+            font-size: fc(20,960,16);;
+            margin-top: 15px;
+        }
+    }
+    &-text {
+        text-align: left;
+        font-size: 16px;
+        width: 80%;
+        margin: 40px auto 0;
+    }
+}
+.clip-box {
+    position: relative;
+    text-align: right;
+    margin-top: 80px;
+    z-index: 1;
+    img {
+        position: absolute;
+        width: 50%;
+        left: 0;
+        top: 10%;
+        transform: translate(-50px,0);
+        &.active {
+            position: absolute;
+            z-index: 10;
+            transform: translate(0,0);
+        }
+    }
+    .btn {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #647311;
+        border: 2px solid #647311;
+        span::before {
+            background: #647311;
+        } 
+    }
+}
+.job {
+    &-container {
+        // height: vw(687,2000);
+        // height: 687px;
+        padding: 100px 0 100px 0;
+        @include bg();
+        background-image: url(../common/images/info-bg.jpg);
+        background-attachment: fixed;
+        .job-ttl {
+            color: #fff;
+            font-size: 42px;
+        }
+        .text {
+            color: #fff;
+            line-height: 1.25;
+            text-align: left;
+            width: 40%;
+        }
+        .btn {
+            color: #fff;
+            border: 2px solid #fff;
+            span::before {
+                background: #fff;
+            } 
+        }
+    }
+    &-text_box {
+        width: 100%;
+        height: 321px;
+        margin: 50px auto 0;
+        padding: 40px 18px 40px 40px;
+        border-radius: 15px;
+        border: solid 5px #707070;
+        background-color: #fff;;
+    }
+    &-item {
+        height: 422px;
+        background: #bab601;
+        position: relative;
+        overflow: hidden;
+        &::before {
+            @include before();
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            // background: #bab601;
+            z-index: 20;
+            // @include bg();
+            // background-image: url(../common/images/access-bg.jpg);
+            // background-attachment: fixed;
+            background: #fff;
+        }
+        //アニメーションの設定
+        transition: all 0.4s ease;
+        width: 0;
+        &.active {
+            // opacity: 1;
+            width: 100%;
+            &::before {
+                transition: all 0.4s 0.7s ease;
+                left: 100%;
+                
+            }
+        }
+    }
+    &-img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50vw;
+        height: 422px;
+        border-radius: 100px 0 0 300px;
+        z-index: 10;
     }
 }

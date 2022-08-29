@@ -7,7 +7,9 @@
     box-sizing: border-box;
     font-family: $f_ttl;
 }
-
+img {
+    vertical-align: bottom;
+}
 .text {
     font-family: $f_noto;
     font-size: fc(16,$sp,14);
@@ -86,7 +88,49 @@
     }
     
 }
-
+.btn {
+    display: block;
+    width: 300px;
+    height: 60px;
+    margin-top: 50px;
+    border-radius: 30px;
+    border: solid 2px #bab601;
+    font-size: 24px;
+    text-align: center;
+    line-height: 60px;
+    color: #bab601;
+    span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        position: relative;
+        z-index: 1;
+        &::before {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 0;
+            height: 100%;
+            border-radius: 30px;
+            background: #bab601;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            transition: all 0.3s ease-out;
+            z-index: -1;
+        }
+    }
+    &:hover {
+        border: none;
+        span {
+            color: #fff;
+        }
+        span::before {
+        width: 100%;
+        } 
+    }
+}
 //スライド各種テキストタイトルボタンのCSS
 .slide {
     overflow: hidden;
