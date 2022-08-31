@@ -12,6 +12,7 @@
   background-position: center left;
   background-repeat: no-repeat;
   background-image: url(../images/bg-footer2.jpg);
+  background-attachment: fixed;
 }
 
 .footer-item {
@@ -40,20 +41,21 @@
 
 .footer-logo {
   display: block;
-  width: 300px;
+  width: 400px;
+  margin-bottom: 100px;
 }
 
 .footer-ttl {
   margin-top: 50px;
   color: #fff;
-  font-size: 30px;
+  font-size: 40px;
   text-shadow: 3px 3px 20px #114408;
 }
 
 .footer-item02 .footer-inner {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
-  padding: 10px 0px 20px 20px;
+  padding: 40px 0px 20px 20px;
 }
 
 .footer-item02 .footer-ttl {
@@ -67,6 +69,7 @@
 }
 
 .footer-item02 .footer-list a {
+  width: 100%;
   padding: 5px 10px;
   border-radius: 0;
   text-align: left;

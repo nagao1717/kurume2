@@ -365,8 +365,12 @@
 }
 
 .link-ttl {
-  font-size: 25px;
+  font-size: 20px;
   margin-bottom: 10px;
+}
+
+.link-text {
+  font-size: 14px;
 }
 
 .link-btn {
